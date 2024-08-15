@@ -140,7 +140,7 @@ h1 {
 }
 
 .copyright {
-    background-color: #F5EAE0; /* Light color as previously used */
+    background-color: #F5EAE0; 
     height: 50px;
     width: 100%;
     display: flex;

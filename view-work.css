@@ -67,7 +67,7 @@ h1 {
 .work-item img {
     transition: transform 0.3s, box-shadow 0.3s;
     border-radius: 10px;
-    max-width: 100%; /* Ensure images fit within their containers */
+    max-width: 100%; 
     height: auto; 
 }
 
