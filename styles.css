@@ -1,16 +1,24 @@
 :root {
   --primary-color: #ff6f61;
-  --secondary-color: #ff6f61;
-  --font-family: 'Montserrat', sans-serif;
+  --secondary-color: #333;
+  --tertiary-color: #F5EAE0;
+  
+  --font-archivo: 'Archivo', sans-serif;
+  --font-hepta-slab-bold: 'Hepta Slab', serif;
+  
 }
 
 body {
-  font-family: var(--font-family);
-  color: #333;
+  /* font-family: var(--font-family); */
+  color: var(--secondary-color);
+}
+
+.navbar-nav {
+  margin-left: auto;
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: #333;
+  color: var(--secondary-color);
   font-weight: bold;
 }
 
@@ -27,18 +35,19 @@ body {
 }
 
 h1 {
-  font-family: 'Hepta Slab', serif;
+  font-family: var(--font-hepta-slab-bold);
+  
   font-weight: bold;
   font-size: 60px;
 }
 
 .lead {
-  font-family: 'Hepta Slab', serif;
+  font-family: var(--font-hepta-slab-bold);
   font-weight: 400; /* Regular */
   font-size: 36px;
 }
 
-.highlight {
+.highlights {
   color: var(--primary-color);
 }
 
@@ -59,199 +68,118 @@ h1 {
 }
 
 .background-img {
-  position: absolute;
-  top: 0;
-  right: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
-  left: 80px;
-  z-index: -1; /* Ensure the background image is behind the profile image */
 }
 
-.custom-button, .resume-button {
+.port-button,
+.resume-button {
   display: inline-block;
   width: 361px;
   height: 87px;
   background-color: #FF676F;
   color: white;
-  font-size: 20px; /* Adjust font size as needed */
+  font-size: 20px; 
   text-align: center;
-  line-height: 87px; /* Center text vertically */
+  line-height: 87px; 
   border-radius: 14px;
   text-decoration: none;
-  font-family: 'Archivo', sans-serif; 
+  font-family: var(--font-archivo);
   margin-left: 20px;
   text-decoration: none;
   margin-top: 10px;
-  /* Ensure this matches the font you are using */
-  
 }
 
-/* Styles for the Portfolio button */
-.custom-button {
+.port-button {
   background-color: #FF676F;
   color: white;
-  
-}
-.custom-button {
   margin-left: -8px; 
 }
 
-
 .resume-button:hover {
-  background-color: white; /* Background color on hover */
-  color: #FF676F; /* Text color on hover */
-  text-decoration: none; /* Ensure no underline on hover */
+  background-color: white; 
+  color: #FF676F; 
+  text-decoration: none; 
   border: 4px solid #FF676F;
-  /* color: #fff; 
-  text-decoration: none;  */
 }
 
-.custom-button:hover {
-   /* Adjust hover color if needed */
-  color: #fff; /* Text color on hover */
-  text-decoration: none; /* Ensure no underline on hover */
+.port-button:hover {
+  color: #fff; 
+  text-decoration: none; 
 }
 
-/* Styles for the Download Resume button */
 .resume-button {
   text-decoration: none;
   background-color: white;
   color: #FF676F;
-  border: 2px solid #FF676F; /* Add black border */
+  border: 2px solid #FF676F; 
 }
 
-/* footer {
-  background-color: #f8f9fa;
-  padding: 20px 0;
-} */
-
-
-
-
 .copyright {
-  background-color: #F5EAE0;
+  background-color: var(--tertiary-color);
   width: auto;
   height: 50px;
   display: flex;
-  align-items: center; /* Vertically center the content */
-  justify-content: center; /* Horizontally center the content */
-  font-family: 'Archivo', sans-serif; /* Ensure this matches the font you are using */
-  font-size: 14px; /* Adjust font size as needed */
-  margin-top: 20px; /* Space from the content above */
+  align-items: center; 
+  justify-content: center; 
+  font-family: var(--font-archivo); 
+  font-size: 14px; 
+  margin-top: 20px; 
 }
-
-
-/* page view work  */
 
 html, body {
-  height: 100%; /* Ensure the body takes up the full viewport height */
-  margin: 0; /* Remove default margin */
+  height: 100%; 
+  margin: 0; 
   overflow-x: hidden;
 }
+
 .main-content {
-  flex: 1; /* Make sure the main content area grows to fill available space */
+  flex: 1; 
 }
+
 body {
   display: flex;
-  flex-direction: column; /* Stack elements vertically */
+  flex-direction: column; 
 }
 
 
-
-
-
-@media (max-width: 576px) {
-  .navbar-collapse {
-      display: flex;
-      flex-direction: column;
-      align-items: center; /* Center the menu items horizontally */
-  }
-
-  .navbar-nav {
-      display: flex;
-      flex-direction: column;
-      width: 100%; /* Make the nav take the full width */
-  }
-
-  .nav-item {
-      width: 100%; /* Make each nav item take the full width */
-      text-align: center; /* Center the text in each nav item */
-  }
+.background-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  left: 80px;
+  object-fit: cover;
+  z-index: -1;
 }
 
 
-/* Media Queries */
-
-@media (max-width: 780px) {
-  .custom-button, .resume-button {
-      width: 361px;
-      height: 87px;
-  }
-  .btn-group {
-      flex-direction: row;
-      justify-content: space-around;
-     
-  }
-}
-/* Mobile (576px and up) */
-@media (max-width: px) {
-  h1 {
-    font-size: 30px;
-    /* text-align: center; */
-  }
-
-  .lead {
-    font-size: 26px;
-   
-  }
-
-  
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  word-wrap: normal;
 }
 
-/* Small Mobile (up to 575px) */
-
- @media (max-width: 576px) {
-            .custom-button, .resume-button {
-                width: 300px;
-                height: 87px;
-            }
-            .btn-group {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-
-
-        @media (max-width: 960px) {
-          .custom-button, .resume-button {
-            transform: scale(0.9); /* Shrink to 90% of original size */
-          }
-        }
-
-
-
-
-        .skip-link {
-            position: absolute;
-            top: -40px; /* Move the link out of view */
-            left: 0;
-            width: 100%;
-            background-color: #ff6f61;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            z-index: 1000;
-            transition: top 0.3s ease;
-            opacity: 0;
-            visibility: hidden;
-        }
-        
-        .skip-link:focus {
-            top: 0;
-            opacity: 1;
-            visibility: visible;
-        }
-        
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: visible;
+  clip: auto;
+  clip-path: none;
+  white-space: normal;
+}

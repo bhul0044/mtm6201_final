@@ -188,4 +188,22 @@
                 text-align: center;
             }
         }
+       .skip-link {
+    position: absolute;
+    top: -40px; 
+    left: -40px; 
    
+    color: #fff; 
+    padding: 10px;
+    z-index: 1000; 
+ 
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 0;
+    left: 0;
+    background-color: #fff; 
+    color: #000; 
+   
+}

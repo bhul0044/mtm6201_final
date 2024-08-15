@@ -4,6 +4,7 @@
     --font-family: 'Montserrat', sans-serif;
     --inter-font: 'Inter', sans-serif;
     --text-color: #333;
+    --font-archivo: 'Archivo', sans-serif;
 }
 
 html, body {
@@ -15,7 +16,6 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    font-family: var(--font-family);
     color: var(--text-color);
 }
 
@@ -42,20 +42,6 @@ h1 {
     font-weight: bold;
 }
 
-/* .highlight {
-    color: var(--primary-color);
-} */
-
-/* .btn-primary {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-} */
-
-/* .btn-outline-primary {
-    color: var(--primary-color);
-    border-color: var(--primary-color);
-} */
-
 .profile-img {
     border-radius: 10px;
     width: 100%;
@@ -73,31 +59,6 @@ h1 {
     z-index: -1;
 }
 
-/* .custom-button, .resume-button {
-    display: inline-block;
-    width: 361px;
-    height: 87px;
-    background-color: #FF676F;
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    line-height: 87px;
-    border-radius: 14px;
-    text-decoration: none;
-    font-family: 'Archivo', sans-serif;
-    margin-left: 20px;
-} */
-
-/* .custom-button {
-    background-color: #FF676F;
-    color: white;
-}
-
-.resume-button {
-    background-color: white;
-    color: #FF676F;
-    border: 2px solid #FF676F;
-} */
 
 .work-item {
     text-align: center;
@@ -106,6 +67,8 @@ h1 {
 .work-item img {
     transition: transform 0.3s, box-shadow 0.3s;
     border-radius: 10px;
+    max-width: 100%; /* Ensure images fit within their containers */
+    height: auto; 
 }
 
 .work-item img:hover {
@@ -127,7 +90,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Archivo', sans-serif;
+    font-family: var(--font-archivo);
     font-size: 14px;
     margin-top: 20px;
 }
@@ -190,13 +153,13 @@ h1 {
 /* Tablet-specific styles */
 @media (min-width: 576px) and (max-width: 991.98px) {
 .work-item img {
-width: 100%; /* Ensure images are responsive on tablets */
+width: 100%; 
 height: auto;
-/* Additional tablet-specific styles can go here if needed */
+
 }
 
 .work-item p {
-font-size: 24px; /* Adjust text size for tablets */
+font-size: 24px; 
 }
 
 
@@ -206,13 +169,13 @@ font-size: 24px; /* Adjust text size for tablets */
 /* Desktop-specific styles */
 @media (min-width: 992px) {
 .work-item img {
-width: 100%; /* Ensure images are responsive on desktops */
+width: 100%; 
 height: auto;
-/* Additional desktop-specific styles can go here if needed */
+
 }
 
 .work-item p {
-font-size: 32px; /* Adjust text size for larger screens */
+font-size: 32px; 
 }
 }
 

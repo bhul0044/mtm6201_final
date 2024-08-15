@@ -1,5 +1,4 @@
-
-        :root {
+:root {
     --primary-color: #ff6f61;
     --font-family: 'Montserrat', sans-serif;
     --email-gradient-start: #FBA163;
@@ -15,6 +14,16 @@ html, body {
     font-family: var(--font-family);
     color: #333;
     box-sizing: border-box;
+}
+
+.background-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 body {
@@ -54,14 +63,14 @@ h1 {
     margin-bottom: 20px;
 }
 
-.contact-container {
+.contact-container-area {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
 }
 
-.contact-box {
+.contact-boxes {
     width: 819px;
     height: 74px;
     color: white;
@@ -76,15 +85,15 @@ h1 {
     user-select: none;
 }
 
-.contact-box.email {
+.contact-boxes.email {
     background: linear-gradient(90deg, var(--email-gradient-start) 86%, var(--email-gradient-end) 100%);
 }
 
-.contact-box.phone {
+.contact-boxes.phone {
     background: linear-gradient(90deg, var(--phone-gradient-start) 0%, var(--phone-gradient-end) 11%);
 }
 
-.contact-box input {
+.contact-boxes input {
     width: 100%;
     height: 100%;
     border: none;
@@ -97,34 +106,50 @@ h1 {
     border-radius: 10px;
 }
 
-.social-media {
+.contact-boxes.submit button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--primary-color); 
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-boxes.submit button:hover {
+    background-color: #FBA163; 
+}
+
+.social-media-handle {
     display: flex;
     justify-content: center;
     gap: 42px;
     margin-top: 30px;
 }
 
-.social-media a {
+.social-media-handle a {
     display: block;
     width: 50px;
     height: 50px;
 }
 
-.social-media img {
+.social-media-handle img {
     width: 100%;
     height: auto;
 }
 
 .copyright {
-    background-color: #F5EAE0;
-    width: auto;
+    background-color: #F5EAE0; /* Light color as previously used */
     height: 50px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Archivo', sans-serif;
+    font-family: var(--font-family);
     font-size: 14px;
-    margin-top: 20px;
+    color: #333;
+    margin-top: 70px;
 }
 
 /* Mobile view styles */
@@ -150,7 +175,7 @@ h1 {
         font-size: 24px;
     }
 
-    .contact-box {
+    .contact-boxes {
         max-width: 302px;
         height: 51px;
     }
@@ -158,7 +183,7 @@ h1 {
 
 /* Tablet view styles */
 @media (min-width: 769px) and (max-width: 1024px) {
-    .contact-box {
+    .contact-boxes {
         width: 302px;
         height: 51px;
     }
@@ -168,4 +193,20 @@ h1 {
     }
 }
 
-  
+/* Skip Links */
+.skip-link {
+    position: absolute;
+    top: -40px; 
+    left: -40px; 
+    color: #fff;
+    padding: 10px;
+    z-index: 1000;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 0;
+    left: 0;
+    background-color: #fff; 
+    color: #000;
+}
